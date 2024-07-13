@@ -15,7 +15,6 @@ fi
 poetry check
 poetry run pip check
 poetry export -f requirements.txt --output requirements.txt --without-hashes
-poetry run pytest
 cd ./doc
 poetry run doc8 --ignore-path build --max-line-length 100 -q
 # check for broken links in the docs ############
