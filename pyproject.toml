@@ -1,0 +1,121 @@
+[tool.poetry]
+name = "igs-tools"
+version = "0.1.0"
+description = "IGS Site Log Manager"
+authors = ["Brian Kohan <bkohan@jpl.nasa.gov>"]
+license = "MIT"
+repository = "https://github.com/International-GNSS-Service/igs-tools"
+homepage = "https://igs-tools.rtfd.io"
+readme = "README.md"
+keywords = [
+    "Site Log",
+    "sitelog",
+    "IGS",
+    "International Geodetic Service",
+    "GNSS",
+    "GPS",
+    "GLONASS",
+    "Galileo",
+    "BeiDou",
+    "QZSS",
+    "SLM"
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 4 - Beta",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [
+    { include = 'igs_tools' }
+]
+exclude = ["tests"]
+
+# [tool.poetry.scripts]
+# slm-startproject = 'slm.bin.startproject:app'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+beautifulsoup4 = "^4.12.3"
+python-dateutil = "^2.9.0.post0"
+enum-properties = "^1.7.0"
+typer-slim = "^0.12.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.1"
+doc8 = "^1.1.1"
+readme-renderer = ">=0.43"
+pytest = "^8.2.2"
+coverage = "^7.6.0"
+pytest-cov = "^5.0.0"
+Sphinx = [
+    { version = "^7.2.0", markers = "python_version > '3.8'" },
+    { version = "^7.0.0", markers = "python_version <= '3.8'" },
+]
+sphinxcontrib-typer = {extras = ["html", "pdf", "png"], version = "^0.3.0", markers="python_version >= '3.9'"}
+sphinx-rtd-theme = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+# todo doc8 configuration here is not being picked up and doesnt seem to be working
+# as expected - for now pass these parameters manually
+[tool.doc8]
+max-line-length = 100
+sphinx = true
+
+
+[tool.pytest.ini_options]
+# py.test options:
+python_files = "tests.py"
+norecursedirs = "*.egg .eggs dist build docs .tox .git __pycache__"
+env = ["TERMINAL_WIDTH=80",]
+
+addopts = [
+  "--strict-markers",
+  "--cov=igs_tools",
+  "--cov-branch",
+  "--cov-report=term-missing:skip-covered"
+]
+
+[tool.coverage.run]
+omit = [
+  "tests/**/*.py"
+]
+branch = true
+source = ["igs_tools"]
+concurrency = ["multiprocessing"]
+parallel = true
+relative_files = true
+command_line = "-m pytest --cov=igs_tools"
+
+[tool.coverage.paths]
+source = ["igs_tools"]
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    "doc",
+    "test",
+    "dist",
+    "igs_tools/sitelog"  # todo remove
+]
