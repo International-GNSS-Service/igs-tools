@@ -45,5 +45,5 @@ jobs:
           poetry install
       - name: Run Static Analysis
         run: |
-          ./check.sh
+          ./check.sh --no-fix
           poetry run python -m readme_renderer ./README.md
