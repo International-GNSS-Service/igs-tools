@@ -1,7 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/)
-[![PyPI djversions](https://img.shields.io/pypi/djversions/igs-tools.svg)](https://pypi.org/project/igs-tools/)
 [![PyPI status](https://img.shields.io/pypi/status/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools)
 [![Documentation Status](https://readthedocs.org/projects/igs-tools/badge/?version=latest)](http://igs-tools.readthedocs.io/?badge=latest/)
 [![codecov](https://codecov.io/github/International-GNSS-Service/igs-tools/graph/badge.svg?token=PQVWN1LNM3)](https://codecov.io/github/International-GNSS-Service/igs-tools)
