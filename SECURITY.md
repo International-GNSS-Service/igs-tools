@@ -2,8 +2,7 @@
 
 [![Security Status](https://github.com/International-GNSS-Service/igs-tools/workflows/security/badge.svg)](https://github.com/International-GNSS-Service/igs-tools/actions/workflows/security.yml)
 
-Only the latest version of the igs-tools [![PyPI version](https://badge.fury.io/py/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/) is supported on the versions of Python [![PyPI pyversions](https://img.shields.io/pypi/pyversions/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/) and Django 
-[![PyPI djversions](https://img.shields.io/pypi/djversions/igs-tools.svg)](https://pypi.org/project/igs-tools/) our continuous integrations are currently running on.
+Only the latest version of the igs-tools [![PyPI version](https://badge.fury.io/py/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/) is supported on the versions of Python [![PyPI pyversions](https://img.shields.io/pypi/pyversions/igs-tools.svg)](https://pypi.python.org/pypi/igs-tools/) our continuous integrations are currently running on.
 
 ## Monitoring Dependencies
 
@@ -18,5 +17,4 @@ If we exempt the vulnerability the reason will be noted in the [policy file](htt
 
 ## Reporting a Vulnerability
 
-If you think you have found a vulnerability, and even if you are not sure, please email cb@igs.org
-We will review it and get back to you. Please refrain from public discussions of the issue.
+If you think you have found a vulnerability, and even if you are not sure, please email cb@igs.org We will review it and get back to you. Please refrain from public discussions of the issue.
