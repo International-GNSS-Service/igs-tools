@@ -54,7 +54,7 @@ exclude = ["tests"]
 python = "^3.8"
 beautifulsoup4 = "^4.12.3"
 python-dateutil = "^2.9.0.post0"
-enum-properties = "^1.7.0"
+enum-properties = ">=1.7,<3.0"
 typer-slim = "^0.12.3"
 
 
