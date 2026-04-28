@@ -69,7 +69,7 @@ Sphinx = [
     { version = "^7.2.0", markers = "python_version > '3.8'" },
     { version = "^7.0.0", markers = "python_version <= '3.8'" },
 ]
-sphinxcontrib-typer = {extras = ["html", "pdf", "png"], version = "^0.3.0", markers="python_version >= '3.9'"}
+sphinxcontrib-typer = {extras = ["html", "pdf", "png"], version = ">=0.3,<0.7", markers="python_version >= '3.9'"}
 sphinx-rtd-theme = "^2.0.0"
 
 [build-system]
